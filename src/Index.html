@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Focus Timer</title>
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
     <main class="timer" id="timer">
@@ -11,21 +12,22 @@
             <p class="timer__mode" id="mode">work</p>
             <h1 class="timer__time" id="time">25:00</h1>
         </div>
-        <div class="timer__management" id="management">
-                <button class="timer__start" id="start"><img src="start-icon.png" alt="Start"></button>
-                <button class="timer__stop" id="stop"><img src="stop-icon.png" alt="Stop"></button>
-                <button class="timer__reset" id="reset"><img src="reset-icon.png" alt="Reset"></button>
-        </div>
-        <div class="timer__music-volume" id="music-volume">
-            <div class="timer__music" id="music">
-                <p class="timer__music-name" id="music-name">Relaxing Music</p>
+        <div class="timer__settings" id="settings">
+            <div class="timer__music-volume" id="music-volume">
+                <div class="timer__music" id="music">
+                    <p class="timer__music-name" id="music-name">Relaxing Music</p>
+                </div>
+                <div class="timer__volume" id="volume-container">
+                    <input type="range" id="volume" name="volume" min="0" max="100">
+                    <img src="./assets/icon-volume.svg" alt="Volume">
+                </div>
             </div>
-            <div class="timer__volume" id="volume-container">
-                <label for="volume" id="volume-label">Volume:</label>
-                <input type="range" id="volume" name="volume" min="0" max="100">
+            <div class="timer__management" id="management">
+                <button class="timer__start" id="start"><img src="./assets/icon-back.svg" alt="Start"></button>
+                <button class="timer__stop" id="stop"><img src="./assets/icon-pause.svg" alt="Stop"></button>
+                <button class="timer__reset" id="reset"><img src="./assets/icon-next.svg" alt="Reset"></button>
             </div>
         </div>
     </main>
-    ≠
 </body>
 </html>

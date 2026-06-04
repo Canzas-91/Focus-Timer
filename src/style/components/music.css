@@ -1,0 +1,21 @@
+.timer__music-volume{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    bottom: 30px;
+}
+.timer__volume input{
+    display: none;
+    color: var(--color-white);
+}
+.timer__volume img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.timer__music{
+    border: var(--border);
+    border-radius: 80px;
+    padding: 10px 40px;
+}
