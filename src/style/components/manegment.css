@@ -1,5 +1,4 @@
 .timer__settings{
-    width: 100vh;
     position: absolute;
     bottom: 30px;
     left: 0;
@@ -12,13 +11,13 @@
 }
 .timer__management{
     position: absolute;
-    right: -290px;
+    left: 50%;
     bottom: 0;
+    transform: translateX(-50%);
+
     display: flex;
     gap: 45px;
-    justify-content: space-between;
     border: var(--border);
     border-radius: 80px;
     padding: 10px 90px;
-    font-size: 24px;
 }

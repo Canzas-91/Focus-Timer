@@ -1,7 +1,8 @@
 .timer__mode{
     font-size: 49px;
     position: absolute;
-    left: 47%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .timer__time{
     font-size: 220px;
