@@ -1,32 +1,28 @@
-import {startBreak} from "./breakTime.js";
-
-export let workTime = 5; // 25 minutes in seconds
+let breakTime = 10; // 5 minutes in seconds
 let timerInterval = null;
 
 const time = document.getElementById('time');
 const mode = document.getElementById('mode');
 const buttonStop = document.getElementById('stop-icon');
 
-// Функция для обновления отображения времени
 function Timer() {
-    let minutes = Math.floor(workTime / 60);
+    let minutes = Math.floor(breakTime / 60);
     if(minutes % 60 < 10){
         minutes = '0' + minutes % 60;
     }else{
         minutes = minutes % 60;
     }
-    let remainingSeconds = workTime % 60;
+    let remainingSeconds = breakTime % 60;
     if(remainingSeconds < 10){
         remainingSeconds = '0' + remainingSeconds;
     }
-    if (workTime === 0) {
-        mode.textContent = 'Break Time';
+    if (breakTime === 0) {
+        mode.textContent = 'Work Time';
     }
     time.textContent = `${minutes}:${remainingSeconds}`;
 }
 
-// Функция для запуска таймера
-export function startTimer() {
+export function startBreak() {
     buttonStop.src = './assets/icon-start.svg';
     if (timerInterval !== null) {
         buttonStop.src = './assets/icon-pause.svg';
@@ -35,18 +31,12 @@ export function startTimer() {
         return;
     }
     timerInterval = setInterval(() => {
-        if (workTime === 0) {
+        if (breakTime === 0) {
             clearInterval(timerInterval);
             timerInterval = null;
-            startBreak();
             return;
         }
-        workTime--;
+        breakTime--;
         Timer();
-        console.log(workTime);
     }, 1000);
-
-
 }
-
-
