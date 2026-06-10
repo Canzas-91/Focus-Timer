@@ -1,16 +1,20 @@
 .timer__settings{
-    position: absolute;
     bottom: 30px;
     left: 0;
     right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 0 30px;
 } 
 .timer__music-volume{
-    position: absolute;
+    position: relative;
     left: 30px;
     bottom: 0;
 }
 .timer__management{
-    position: absolute;
+    position: relative;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
@@ -20,4 +24,53 @@
     border: var(--border);
     border-radius: 80px;
     padding: 10px 90px;
+}
+@media (max-width: 1024px){
+    .timer__management{
+        gap: 30px;
+        border-radius: 80px;
+        padding: 10px 75px;
+    }
+}
+
+@media (max-width: 760px){
+   .timer__management{
+        gap: 25px;
+        border-radius: 80px;
+        padding: 10px 60px;
+
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        transform: translateX(-50%);
+    }
+    .timer__management button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px){
+   .timer__management{
+        gap: 25px;
+        border-radius: 80px;
+        padding: 10px 60px;
+
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        transform: translateX(-50%);
+    }
+    .timer__management button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+    }
 }

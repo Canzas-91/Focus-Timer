@@ -22,3 +22,48 @@
 .volume {
     display: inline;
 }
+@media (max-width: 1024px){
+    .timer__music{
+        padding: 10px 30px;
+        width: 20vh;
+    }
+}
+
+@media (max-width: 768px){
+    .timer__music-volume{
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        display: block;
+    }
+    .timer__music{
+        position: absolute;
+        top: -520px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 24px;
+        width: max-content;
+        max-width: calc(100vw - 40px);
+    }
+    .timer__volume img {
+        display: block;
+    }
+}
+
+@media (max-width: 480px){
+    .timer__music-volume{
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+    }
+    .timer__music{
+        top: -430px;
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .timer__volume{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}

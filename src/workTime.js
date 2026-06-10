@@ -1,6 +1,6 @@
 import {startBreak} from "./breakTime.js";
 
-export let workTime = 5; // 25 minutes in seconds
+export let workTime = 1500; // 25 minutes in seconds
 let timerInterval = null;
 
 const time = document.getElementById('time');
@@ -43,10 +43,7 @@ export function startTimer() {
         }
         workTime--;
         Timer();
-        console.log(workTime);
     }, 1000);
-
-
 }
 
 

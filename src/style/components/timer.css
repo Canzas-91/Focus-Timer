@@ -7,3 +7,21 @@
 .timer__time{
     font-size: 220px;
 }
+
+@media (max-width: 1024px){
+    .timer__mode{
+        font-size: 36px;
+    }
+    .timer__time{
+        font-size: 190px;
+    }
+}
+
+@media (max-width: 760px){
+    .timer__mode{
+        font-size: 30px;
+    }
+    .timer__time{
+        font-size: 160px;
+    }
+}
