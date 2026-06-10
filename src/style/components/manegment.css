@@ -33,7 +33,15 @@
     }
 }
 
-@media (max-width: 760px){
+@media (max-width: 768px){
+   .timer__settings{
+        top: 0;
+        bottom: 0;
+        padding: 0 20px 20px;
+    }
+   .timer__music-volume{
+        left: auto;
+    }
    .timer__management{
         gap: 25px;
         border-radius: 80px;
@@ -55,10 +63,13 @@
 }
 
 @media (max-width: 480px){
+   .timer__settings{
+        padding: 0 16px 16px;
+    }
    .timer__management{
-        gap: 25px;
+        gap: 16px;
         border-radius: 80px;
-        padding: 10px 60px;
+        padding: 10px 24px;
 
         position: absolute;
         left: 50%;

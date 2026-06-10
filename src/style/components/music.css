@@ -31,39 +31,39 @@
 
 @media (max-width: 768px){
     .timer__music-volume{
-        left: 20px;
-        right: 20px;
-        bottom: 20px;
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translateX(-50%);
         display: block;
+        width: calc(100% - 40px);
     }
     .timer__music{
-        position: absolute;
-        top: -520px;
-        left: 50%;
-        transform: translateX(-50%);
+        position: static;
+        margin: 0 auto;
         padding: 10px 24px;
-        width: max-content;
-        max-width: calc(100vw - 40px);
+        width: fit-content;
+        max-width: 280px;
+        text-align: center;
     }
-    .timer__volume img {
-        display: block;
+    .timer__volume{
+        position: absolute;
+        left: -9999px;
+        opacity: 0;
+        pointer-events: none;
     }
 }
 
 @media (max-width: 480px){
     .timer__music-volume{
-        left: 16px;
-        right: 16px;
-        bottom: 16px;
+        top: 16px;
+        width: calc(100% - 32px);
     }
     .timer__music{
-        top: -430px;
         padding: 8px 20px;
         font-size: 14px;
-    }
-    .timer__volume{
-        position: absolute;
-        left: 0;
-        bottom: 0;
+        max-width: 220px;
     }
 }

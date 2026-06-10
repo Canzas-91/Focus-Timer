@@ -17,11 +17,30 @@
     }
 }
 
-@media (max-width: 760px){
+@media (max-width: 768px){
     .timer__mode{
         font-size: 30px;
+        top: 72px;
+        width: 100%;
+        text-align: center;
     }
     .timer__time{
         font-size: 160px;
+        margin-top: 165px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px){
+    .timer__mode{
+        font-size: 24px;
+        top: 66px;
+        width: 100%;
+        text-align: center;
+    }
+    .timer__time{
+        font-size: 110px;
+        margin-top: 145px;
+        text-align: center;
     }
 }
