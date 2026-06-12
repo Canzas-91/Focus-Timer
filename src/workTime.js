@@ -1,15 +1,22 @@
 import {startBreak} from "./breakTime.js";
 
-export let workTime = 1500; // 25 minutes in seconds
+export let workTime = 5; // 25 minutes in seconds
 let timerInterval = null;
 export let totalCycles = 1;
-let currentCycle = 1;
+export let currentCycle = 1;
 const WORK_DURATION = 5;
 
 
 const time = document.getElementById('time');
 const mode = document.getElementById('mode');
 const buttonStop = document.getElementById('stop-icon');
+
+// Функция для установки общего количества циклов
+export function setTotalCycles(value) {
+    totalCycles = value;
+}
+
+
 
 // Функция для обновления отображения времени
 function Timer() {
@@ -28,9 +35,13 @@ function Timer() {
     }
     time.textContent = `${minutes}:${remainingSeconds}`;
 }
+export function resetWorkTime() {
+    workTime = WORK_DURATION;
+}
 
 // Функция для запуска таймера
 export function startTimer() {
+
     buttonStop.src = './assets/icon-start.svg';
     if (timerInterval !== null) {
         buttonStop.src = './assets/icon-pause.svg';
@@ -38,6 +49,8 @@ export function startTimer() {
         timerInterval = null;
         return;
     }
+    workTime = WORK_DURATION;
+
     timerInterval = setInterval(() => {
         if (workTime === 0) {
             clearInterval(timerInterval);
@@ -48,6 +61,10 @@ export function startTimer() {
         workTime--;
         Timer();
     }, 1000);
+};
+
+export function nextCycle() {
+    currentCycle++;
 }
 
 

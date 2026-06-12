@@ -1,9 +1,12 @@
+import { startTimer, currentCycle, totalCycles, nextCycle, resetWorkTime} from './workTime.js';
 let breakTime = 10; // 5 minutes in seconds
 let timerInterval = null;
+const BREAK_DURATION = 10;
 
 const time = document.getElementById('time');
 const mode = document.getElementById('mode');
 const buttonStop = document.getElementById('stop-icon');
+const audio = document.getElementById('audio');
 
 function Timer() {
     let minutes = Math.floor(breakTime / 60);
@@ -24,6 +27,7 @@ function Timer() {
 
 export function startBreak() {
     buttonStop.src = './assets/icon-start.svg';
+    breakTime = BREAK_DURATION;
     if (timerInterval !== null) {
         buttonStop.src = './assets/icon-pause.svg';
         clearInterval(timerInterval);
@@ -34,7 +38,14 @@ export function startBreak() {
         if (breakTime === 0) {
             clearInterval(timerInterval);
             timerInterval = null;
-            return;
+            if (currentCycle < totalCycles){
+                nextCycle();
+                resetWorkTime();
+                startTimer();
+            }else{
+                audio.pause();
+                audio.currentTime = 0;
+            }
         }
         breakTime--;
         Timer();
