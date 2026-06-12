@@ -2,6 +2,10 @@ import {startBreak} from "./breakTime.js";
 
 export let workTime = 1500; // 25 minutes in seconds
 let timerInterval = null;
+export let totalCycles = 1;
+let currentCycle = 1;
+const WORK_DURATION = 5;
+
 
 const time = document.getElementById('time');
 const mode = document.getElementById('mode');
