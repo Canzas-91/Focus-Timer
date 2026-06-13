@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer</title>
+    <link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+    <main class="timer" id="timer">
+        <div class="timer__time-period" id="time-period">
+            <p class="timer__mode" id="mode">Work</p>
+            <h1 class="timer__time" id="time">25:00</h1>
+        </div>
+        <div class="timer__settings" id="settings">
+            <div class="timer__music-volume" id="music-volume">
+                <div class="timer__music" id="music">
+                    <p class="timer__music-name" id="music-name">lofi music
+                    </p>
+                </div>
+                <div class="timer__volume" id="volume-container">
+                    <input type="range" name="volume" min="0" max="100" id="volume-slider">
+                    <img src="./assets/icon-volume.svg" alt="Volume" id="volume-icon">
+                </div>
+            </div>
+            <div class="timer__management" id="management">
+                <button class="timer__start" id="back"><img src="./assets/icon-back.svg" alt="Back"></button>
+                <button class="timer__stop" id="stop"><img src="./assets/icon-pause.svg" alt="Stop" id="stop-icon"></button>
+                <button class="timer__reset" id="next"><img src="./assets/icon-next.svg" alt="Next"></button>
+            </div>
+            <select class="timer__theme" id="theme">
+                <option value="1">1 цикл</option>
+                <option value="2">2 цикла</option>
+                <option value="3">3 цикла</option>
+                <option value="4">4 цикла</option>
+            </select>
+        </div>
+        <audio id="audio" src="./assets/3 hour lofi radio.mp3" loop></audio>
+    </main>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
