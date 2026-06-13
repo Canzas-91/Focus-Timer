@@ -25,3 +25,17 @@ export function startWork() {
 }
 startWork();
 
+
+export function forwardFiveSecond(){
+    buttonNext.addEventListener('click', () => {
+        audio.currentTime += 5;
+    })
+}
+forwardFiveSecond()
+
+export function backwardFiveSecond(){
+    buttonBack.addEventListener('click', () => {
+        audio.currentTime -= 5;
+    })
+}
+backwardFiveSecond()

@@ -46,6 +46,7 @@ export function startBreak() {
                 audio.pause();
                 audio.currentTime = 0;
             }
+            return;
         }
         breakTime--;
         Timer();
