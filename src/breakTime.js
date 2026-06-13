@@ -1,7 +1,7 @@
 import { startTimer, currentCycle, totalCycles, nextCycle, resetWorkTime} from './workTime.js';
-let breakTime = 10; // 5 minutes in seconds
+let breakTime = 301; // 5 minutes in seconds
 let timerInterval = null;
-const BREAK_DURATION = 10;
+const BREAK_DURATION = 301;
 
 const time = document.getElementById('time');
 const mode = document.getElementById('mode');
