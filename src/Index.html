@@ -18,6 +18,7 @@
                     <p class="timer__music-name" id="music-name">lofi music
                     </p>
                 </div>
+                <!-- Не стоит часто пользоваться id для элементов в силу его ограничения, как правило class достаточно-->
                 <div class="timer__volume" id="volume-container">
                     <input type="range" name="volume" min="0" max="100" id="volume-slider">
                     <img src="./assets/icon-volume.svg" alt="Volume" id="volume-icon">
@@ -25,7 +26,8 @@
             </div>
             <div class="timer__management" id="management">
                 <button class="timer__start" id="back"><img src="./assets/icon-back.svg" alt="Back"></button>
-                <button class="timer__stop" id="stop"><img src="./assets/icon-pause.svg" alt="Stop" id="stop-icon"></button>
+                <!-- Изначальное состояние кнопки должны быть Start, потому что изначально воспроизведение стоит на паузе -->
+                <button class="timer__stop" id="stop"><img src="./assets/icon-start.svg" alt="Stop" id="stop-icon"></button> 
                 <button class="timer__reset" id="next"><img src="./assets/icon-next.svg" alt="Next"></button>
             </div>
             <select class="timer__theme" id="theme">

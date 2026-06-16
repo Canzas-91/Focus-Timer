@@ -2,12 +2,24 @@
     display: flex;
     align-items: center;
     gap: 30px;
+    /* 
+        Стоит избегать использования absolute для выравнивания элементов (а это ровно твой случай). Position: absolute стоит использовать только для элементов,
+        которые выбиваются из верстки и накладываются на нее - как volume slider. 
+        Вместо этого стоит использовать flex или grid. В твоем кейсе три элемента timer__settings стоят в ряд и flex тут отработает хорошо,
+        если задать блоку с "lofi music" + "volume button" и блоку селектом циклов одинаковый размер. У этой задачи несколько решений, это всего лишь одно из них,
+        но position:absolute здесь больше мешает нежели помогает.
+    */
+    
     position: absolute;
     bottom: 30px;
 }
 .timer__volume input{
     display: none;
     color: var(--color-white);
+
+    /* это поможет избежать скачущего "lofi music" кнопки */
+    position: absolute;
+    top: -19px;
 }
 .timer__volume img{
     width: 50px;

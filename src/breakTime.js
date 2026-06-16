@@ -1,7 +1,8 @@
 import { startTimer, currentCycle, totalCycles, nextCycle, resetWorkTime} from './workTime.js';
-let breakTime = 301; // 5 minutes in seconds
-let timerInterval = null;
+// то же самое - лучше представить в виде (60 * 5) + 1 что очевидно 5 минут, просто легче читается
 const BREAK_DURATION = 301;
+let breakTime = BREAK_DURATION; // 5 minutes in seconds  
+let timerInterval = null;
 
 const time = document.getElementById('time');
 const mode = document.getElementById('mode');
@@ -28,6 +29,7 @@ function Timer() {
 export function startBreak() {
     buttonStop.src = './assets/icon-start.svg';
     breakTime = BREAK_DURATION;
+    // Чекни в buttons.js, я оставил коммент по слипшейся функциональности.
     if (timerInterval !== null) {
         buttonStop.src = './assets/icon-pause.svg';
         clearInterval(timerInterval);
